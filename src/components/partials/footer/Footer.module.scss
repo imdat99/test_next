@@ -1,0 +1,241 @@
+/*-----------------
+	5. Footer
+-----------------------*/
+
+.footer {
+    background-color: #f7f7f7;
+    position: relative;
+    padding: 0 10px;
+
+    &-top {
+        padding-top: 60px;
+        position: relative;
+        z-index: 9;
+        font-size: 0.95rem;
+
+        .footer-about-content {
+            max-width: 315px;
+            font-family: var(--font-inter);
+        }
+    }
+
+    &-bottom {
+        position: relative;
+        z-index: 9;
+        font-size: 0.95rem;
+
+        .copyright {
+            padding: 40px 0;
+        }
+
+        .copyright-text {
+            p {
+                color: #000000;
+                text-align: right;
+                font-family: var(--font-inter);
+
+                a:hover {
+                    color: #CB1950;
+                }
+            }
+        }
+    }
+
+    &-title {
+        color: #0a142f;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 26px;
+        text-transform: capitalize;
+    }
+
+    &-widget {
+        &.footer-menu {
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                outline: none;
+
+                li {
+                    margin-bottom: 20px;
+                    position: relative;
+                    font-family: var(--font-inter);
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    a {
+                        color: #000;
+                        transition: all 0.4s ease 0s;
+
+                        i {
+                            margin-right: 5px;
+                        }
+
+                        &:hover {
+                            color: #CB1950;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-logo {
+            margin-bottom: 15px;
+
+            img {
+                height: 40px;
+                max-width: 100%;
+            }
+        }
+
+        .footer-about-content {
+            p {
+                color: #000000;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &-contact-info {
+        color: #26292c;
+        margin-top: 20px;
+
+        img {
+            margin-right: 12px;
+            height: 20px;
+        }
+
+        .footer-address {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+
+            span {
+                margin-right: 20px;
+            }
+
+            p {
+                margin-bottom: 0;
+                font-family: var(--font-inter);
+            }
+
+            a {
+                font-family: var(--font-inter);
+            }
+        }
+
+        p {
+            color: #000;
+
+            i {
+                margin-right: 15px;
+            }
+        }
+    }
+}
+
+.privacy-policy {
+    display: flex;
+    align-items: center;
+
+    ul {
+        display: inline-flex;
+        list-style: none;
+        padding: 0;
+        margin: 0 10px 0 0;
+        align-items: center;
+
+        li {
+            padding: 0 6px;
+            list-style: none;
+
+            &:last-child {
+                border-right: 0;
+            }
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            a {
+                color: #000;
+                font-family: var(--font-inter);
+                &:hover {
+                    color: #CB1950;
+                }
+            }
+        }
+    }
+}
+
+#tiktok {
+    width: 18px;
+    height: 25px;
+}
+
+#zalo-icon {
+    svg {
+        height: 25px;
+    }
+}
+
+.news-letter {
+    form {
+        border-bottom: 0;
+    }
+}
+
+.footer-menu-two {
+    font-weight: 500;
+    font-size: 15px;
+    color: #4f4f4f;
+
+    .footer-title {
+        color: #000;
+    }
+}
+
+.footer-contact-two {
+    .footer-title {
+        color: #000;
+    }
+}
+
+.footer-two {
+    .footer-contact-widget {
+        p {
+            font-weight: 500;
+            color: #4f4f4f;
+        }
+    }
+
+    .privacy-policy {
+        ul {
+            li {
+                a {
+                    font-family: var(--font-inter);
+                    color: #292929;
+
+                    &:hover {
+                        color: #ff602e;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1199.98px) {
+.footer-widget {
+    margin-bottom: 30px;
+}
+}
+@media (max-width: 767.98px) {
+.footer .footer-widget .footer-logo img {
+    max-height: 40px;
+}}
