@@ -29,7 +29,7 @@ export const metadata: Metadata = {
       follow: true,
     },
   },
-  manifest: "/manifest.webmanifest",
+  manifest: "/site.webmanifest",
   icons: {
     icon: [
       { url: "/favicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
