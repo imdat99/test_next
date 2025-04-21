@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Inter, Lexend } from 'next/font/google';
-import "./globals.scss";
+import "./index.css";
 import Footer from "@/components/partials/footer";
+import Header from "@/components/partials/header";
+import { Inter, Lexend } from 'next/font/google';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -76,9 +77,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${lexend.variable} min-h-screen flex flex-col`}>
-        <header>
-
-        </header>
+        <Header />
         <main className="flex-grow">
           {children}
         </main>

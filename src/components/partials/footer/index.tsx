@@ -1,6 +1,5 @@
 import React from 'react'
 import classNames from 'classnames'
-import styles from './Footer.module.scss'
 
 interface FooterWidgetProps {
     title: string
@@ -9,8 +8,8 @@ interface FooterWidgetProps {
 }
 
 const FooterWidget: React.FC<FooterWidgetProps> = ({ title, children, className }) => (
-    <div className={classNames(styles['footer-widget'], className)}>
-        <h2 className={classNames(styles['footer-title'])}>{title}</h2>
+    <div className={classNames("mb-8", className)}>
+        <h2 className="text-[#0a142f] text-lg font-bold mb-6 capitalize font-lexend">{title}</h2>
         {children}
     </div>
 )
@@ -20,18 +19,21 @@ interface FooterMenuProps {
 }
 
 const FooterMenu: React.FC<FooterMenuProps> = ({ items }) => (
-    <ul>
+    <ul className="list-none m-0 p-0 outline-none">
         {items.map((item, index) => (
-            <li key={index}>
-                <a href={item.href}>{item.text}</a>
+            <li key={index} className="mb-5 relative last:mb-0">
+                <a href={item.href} className="text-black transition-all duration-400 hover:text-[#CB1950]">
+                    {item.text}
+                </a>
             </li>
         ))}
     </ul>
 )
+
 const footerMenus = [
     {
         title: 'Dịch Vụ',
-        classNames: "col-lg-3 col-md-6",
+        classNames: "lg:w-1/4 md:w-1/2 w-full",
         items: [
             { text: 'Homestay tại Hà Nội', href: '#' },
             { text: 'Homestay tại Hồ Chí Minh', href: '#' },
@@ -41,7 +43,7 @@ const footerMenus = [
     },
     {
         title: 'Chính Sách',
-        classNames: "col-lg-3 col-md-6",
+        classNames: "lg:w-1/4 md:w-1/2 w-full",
         items: [
             { text: 'Điều khoản', href: '/terms-of-service' },
             { text: 'Nội quy chung', href: '/homestay-rules' },
@@ -51,7 +53,7 @@ const footerMenus = [
     },
     {
         title: 'SenStay',
-        classNames: "col-lg-2 col-md-6",
+        classNames: "lg:w-1/6 md:w-1/2 w-full",
         items: [
             { text: 'Blogs', href: '/blogs' },
             { text: 'Liên hệ', href: '/contact-us' },
@@ -79,40 +81,40 @@ const socialIcons = [
         iconUrl: '/assets/img/icon/zalo.svg'
     }
 ]
-const Footer = () => {
 
+const Footer = () => {
     return (
-        <footer className={styles.footer}>
-            <div className={styles['footer-top']} data-aos="fade-up">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-4 col-md-6">
-                            <div className={classNames(styles['footer-widget'], styles['footer-about'], styles['footer-contact'])}>
-                                <div className={classNames(styles['footer-logo'])}>
-                                    <img src="/assets/img/logo/logo.png?v=0.2" alt="logo" />
+        <footer className="bg-[#f7f7f7] relative px-2.5">
+            <div className="pt-15 relative z-10 text-[0.95rem]" data-aos="fade-up">
+                <div className="container mx-auto px-4">
+                    <div className="flex flex-wrap -mx-3">
+                        <div className="lg:w-1/3 md:w-1/2 w-full px-3">
+                            <div className="lg:mb-0 mb-8 *:font-inter">
+                                <div className="mb-4">
+                                    <img src="/assets/img/logo/logo.png?v=0.2" alt="logo" className="h-10 max-w-full" />
                                 </div>
-                                <div className={styles['footer-about-content']}>
-                                    <p>Nền tảng đặt homestay, căn hộ dịch vụ hàng đầu tại Việt Nam.</p>
+                                <div className="max-w-[315px]">
+                                    <p className="text-black">Nền tảng đặt homestay, căn hộ dịch vụ hàng đầu tại Việt Nam.</p>
                                 </div>
-                                <div className={styles['footer-contact-info']}>
-                                    <div className={styles['footer-address']}>
-                                        <img src="/assets/img/icon/icon-20.svg" alt="Location Icon" className="img-fluid" />
-                                        <p>95 Kim Mã, Quận Ba Đình, TP Hà Nội</p>
+                                <div className="text-[#26292c] mt-5 [&_img]:h-5 [&_img]:mr-3">
+                                    <div className="flex items-center mb-5">
+                                        <img src="/assets/img/icon/icon-20.svg" alt="Location Icon" />
+                                        <p className="mb-0">95 Kim Mã, Quận Ba Đình, TP Hà Nội</p>
                                     </div>
-                                    <div className={styles['footer-address']}>
-                                        <img src="/assets/img/icon/icon-19.svg" alt="Email Icon" className="img-fluid" />
+                                    <div className="flex items-center mb-5">
+                                        <img src="/assets/img/icon/icon-19.svg" alt="Email Icon" />
                                         <a href="mailto:admin@senstay.vn">admin@senstay.vn</a>
                                     </div>
-                                    <div className={styles['footer-address']}>
-                                        <img src="/assets/img/icon/icon-21.svg" alt="Phone Number Icon" className="img-fluid" />
+                                    <div className="flex items-center">
+                                        <img src="/assets/img/icon/icon-21.svg" alt="Phone Number Icon" />
                                         <a href="https://zalo.me/3265291769345246104">+84 868 881 442</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         {footerMenus.map((menu, index) => (
-                            <div className={menu.classNames} key={index}>
-                                <FooterWidget title={menu.title} className={styles['footer-menu']}>
+                            <div className={menu.classNames + " px-3"} key={index}>
+                                <FooterWidget title={menu.title}>
                                     <FooterMenu items={menu.items} />
                                 </FooterWidget>
                             </div>
@@ -120,29 +122,31 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className={styles['footer-bottom']}>
-                <div className="container">
-                    <div className={styles['copyright']}>
-                        <div className="row">
-                            <div className="col-md-6">
-                                <div className={styles['privacy-policy']}>
-                                    <ul>
-                                        <li><a href="#">Sitemaps</a></li>
+            <div className="relative z-10 text-[0.95rem]">
+                <div className="container mx-auto px-4">
+                    <div className="py-10">
+                        <div className="flex flex-wrap">
+                            <div className="md:w-1/2 w-full">
+                                <div className="flex items-center">
+                                    <ul className="flex items-center list-none p-0 m-0 mr-2.5">
+                                        <li className="px-1.5 first:pl-0">
+                                            <a href="#" className="text-black font-inter hover:text-[#CB1950]">Sitemaps</a>
+                                        </li>
                                     </ul>
-                                    <ul>
+                                    <ul className="flex items-center list-none p-0 m-0">
                                         {socialIcons.map((icon, index) => (
-                                            <li key={index}>
+                                            <li key={index} className="px-1.5">
                                                 <a rel="noopener noreferrer" target="_blank" href={icon.href}>
-                                                    <img src={icon.iconUrl} alt={icon.href} />
+                                                    <img src={icon.iconUrl} alt={icon.href} className="h-[18px]" />
                                                 </a>
                                             </li>
                                         ))}
                                     </ul>
                                 </div>
                             </div>
-                            <div className="col-md-6">
-                                <div className={styles['copyright-text']}>
-                                    <p className="mb-0">&copy; 2025 SenStay. All rights reserved.</p>
+                            <div className="md:w-1/2 w-full">
+                                <div className="text-right">
+                                    <p className="mb-0 text-black font-inter">&copy; 2025 SenStay. All rights reserved.</p>
                                 </div>
                             </div>
                         </div>

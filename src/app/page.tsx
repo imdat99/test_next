@@ -1,20 +1,19 @@
-import styles from "./page.module.css";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
+    <div className="page">
+      <main className="main">
         <ol>
           <li>
             Get started by editing <code>src/app/page.tsx</code>.
           </li>
-          <li>Save and see your changes instantly.</li>
+          <li className="text-3xl font-bold underline">Save and see your changes instantly.</li>
         </ol>
 
-        <div className={styles.ctas}>
+        <div className="ctas">
           <a
-            className={styles.primary}
+            className="primary"
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
@@ -26,13 +25,13 @@ export default function Home() {
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
-            className={styles.secondary}
+            className="secondary"
           >
             Read our docs
           </a>
         </div>
       </main>
-      <footer className={styles.footer}>
+      <footer className="footer">
         <a
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           target="_blank"
@@ -57,8 +56,8 @@ export default function Home() {
       <Button>Default</Button>
       <Button variant="outline" size="lg">Outline LG</Button>
       <Button variant="ghost" size="sm">Ghost SM</Button>
-      <Button isLoading>Loading...</Button>
-      <Button iconLeft="🔥">With Icon Left</Button>
+      {/* <Button isLoading>Loading...</Button> */}
+      {/* <Button iconLeft="🔥">With Icon Left</Button> */}
       <Button >Next</Button>
     </div>
       </footer>
