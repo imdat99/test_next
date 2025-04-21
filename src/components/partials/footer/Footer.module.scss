@@ -239,3 +239,13 @@
 .footer .footer-widget .footer-logo img {
     max-height: 40px;
 }}
+@media (max-width: 767.98px) {
+    .privacy-policy {
+        text-align: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .copyright-text p {
+        text-align: center!important;
+    }
+}

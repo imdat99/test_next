@@ -134,7 +134,7 @@ const Footer = () => {
                                         {socialIcons.map((icon, index) => (
                                             <li key={index}>
                                                 <a rel="noopener noreferrer" target="_blank" href={icon.href}>
-                                                    <Image src={icon.iconUrl} alt={icon.href} width={20} height={20} />
+                                                    <img src={icon.iconUrl} alt={icon.href} />
                                                 </a>
                                             </li>
                                         ))}

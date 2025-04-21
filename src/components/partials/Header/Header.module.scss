@@ -1,0 +1,123 @@
+
+.header-nav {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: space-between;
+    position: relative;
+    height: 70px;
+    padding: 0 20px;
+    margin-bottom: 0;
+    transition-duration: 0.4s;
+
+}
+
+.header-page .header-nav {
+    background-color: #fff;
+}
+
+.logo {
+    display: inline-block;
+    /*margin-right: 30px;*/
+    width: 36px;
+}
+
+.header-navbar-rht {
+    margin: 0;
+    margin-left: 0;
+    padding: 0;
+}
+
+.header-navbar-rht > li {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding-right: 20px;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    position: relative;
+}
+
+.header-navbar-rht li:last-child {
+    padding-right: 0;
+}
+
+.header-navbar-rht > li > a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #26292c;
+}
+
+.user-img {
+    display: inline-block;
+    position: relative;
+}
+
+.user-img > img {
+    height: 50px;
+    object-fit: cover;
+    width: 50px;
+    border-radius: 50%;
+    border: 3px solid #e0e0e0;
+}
+
+.header-fixed {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    box-shadow: rgb(0 0 0 / 8%) 0 1px 0;
+}
+
+.header {
+    background-color: #fff;
+}
+
+.notification-title select:focus-visible {
+    outline: 0;
+}
+
+/*-----------------
+	4. Mobile Menu
+-----------------------*/
+
+.menu-header {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #fff;
+    height: 60px;
+    padding: 0 20px;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: space-between;
+    border-bottom: 1px solid #f0f0f0;
+    display: none;
+}
+
+.menu-logo img {
+    width: 130px;
+}
+
+.menu-close {
+    font-size: 18px;
+}
+
+.navbar-mobile {
+    display: none;
+}
